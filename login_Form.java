@@ -92,13 +92,32 @@ private void jLabel_minimizeMouseClicked(java.awt.event.MouseEvent evt) {
 private void jLabel_minimizeMouseEntered(java.awt.event.MouseEvent evt) {
 
     /*Change the jborder color to white*/
-    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, Color.white);
-    jLabel_minimizesetBorder(label_border);
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
+    jLabel_minimize.setBorder(label_border);
     /*Set the jlabel foreground to white*/
     jLabel_minimizeForeground(Color.white);
 
 }
 
+/*jlabel minimize -> mouse exited event*/
+private void jLabel_minimizeMouseExited(java.awt.event.MouseEvent evt) {
+
+    /*Reset the jLabel border color to white*/
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
+    jLabel_minimize.setBorder(label_border);
+    /*Set the jlabel foreground to white*/
+    jLabel_minimize.setForeground(Color.black);
+
+}
+
+/*jLabel close -> mouse click event*/
+private void jLabel-closeMouseClicked(java.awt.eventMouseEvent evt) {
+
+    system.exit(0);
+
+}
+
+/**/
 
 
 
