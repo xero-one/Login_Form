@@ -66,8 +66,21 @@ public Register_Form() {
     Border label_login_border = BorderFactory.createGlossBorder(0, 0, 1, 0 Color.lightGray);
     jLabel_login.setBorder(label_login_border);
 
+    /*Create a border for the text and password fields*/
+    Border field_border = BorderFactory.createGlossBorder(1, 5, 1, 1, Color.white);
+    jTextField_Username.setBorder(field_border);
+    jTextField_Fullname.setBorder(field_border);
+    jTextField_Phone.setBorder(field_border);
+    jPasswordField_1.setBorder(field_border);
+    jPasswordField_2.setBorder(field_border);
 
+    /*Create a button for interactivity*/
+    ButtonGroup bg = new Buttongroup();
+    bg.add(jRadioButton_Male);
+    bg.add(jRadioButton_Female);
 
 }
+
+
 
 
