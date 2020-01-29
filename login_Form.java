@@ -41,4 +41,33 @@ public class Login_Form {
 
 /*End the class for our application*/
 
+/*beginning of the Login form*/
+
+/*Create a variable to set the image path for the logo*/
+String image_path = null;
+
+public Register_Form() {
+    initComponents();
+
+    /*Center the form positioning*/
+    this.setLocationRelativeTo(null);
+
+    /*Boarder settings for the Jpanel*/
+    Border jpanel_title_border = BorderFactory.createGlossBorder(0, 1, 1, 1, Color.yellow);
+
+    jpanel_title.setBorder(jpanel_title_border);
+
+    /*Secondary border for minimizing and closing jlabels*/
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
+    jLabel_minimize.setBorder(label_border);
+    jLabel_close.setBorder(label_border);
+
+    /*Create a border for the create account jlabel*/
+    Border label_login_border = BorderFactory.createGlossBorder(0, 0, 1, 0 Color.lightGray);
+    jLabel_login.setBorder(label_login_border);
+
+
+
+}
+
 
