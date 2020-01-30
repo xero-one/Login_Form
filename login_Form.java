@@ -197,5 +197,49 @@ private void jLabel_loginMouseClicked(java.awt.event.MouseEvent evt) {
 
 }
 
+/*Reset the jlabel border color on mouse entered*/
+private void jLabel_loginMouseEntered(java.awt.event.MouseEvent evt) {
 
+    Border label_border = BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(0, 240, 0));
+    jLabel_login.setBorder(label_border);
+
+}
+
+/*Reset the jlabel border color on mouse exited*/
+private void jLabel_loginMouseExited(java.awt.event.MouseEvent evt) {
+
+    Border label_create_account_border = borderFactory.createGlossBorder(0, 0, 1, 0, Color.lightGray);
+    jLabel_login.setBorder(label_create_account_border);
+
+}
+
+/*create a function to verify the empty fields*/
+public boolean verifyFields()
+{
+    String fname = jTextField_Fullname.getText();
+    String uname = jTextField_Username.getText();
+    String phone = jTextField_Phone.getText();
+    String pass1 = String.valueOf(jPasswordField_1.getPassword());
+    String pass2 = String.valueOf(jPasswordField_2.getPassword());
+    
+    /*Boolean to check if there are empty fields*/
+    if(fname.trim().equals("") || uname.trim().equals("") || phone.trim().equals("")
+       || pass1.trim().equals("") || pass2.trim().equals(""))
+    {
+        JOptionPane.showMessageDialog(null, "One Or More Fields Are Empty","Empty Fields",2);
+        return false;
+    }
+
+        /*check if the two password are equals or not*/
+    else if(!pass1.equals(pass2))
+    {
+        JOptionPane.showMessageDialog(null, "Password Doesn't Match","Confirm Password",2);
+        return false;
+    }
+        
+        // if everything is ok
+    else{
+        return true;
+    }
+}
 
