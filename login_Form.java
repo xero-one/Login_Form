@@ -41,7 +41,7 @@ public class Login_Form {
 
 /*End the class for our application*/
 
-/*beginning of the Login form*/
+/*Beginning of the Login form*/
 
 /*Create a variable to set the image path for the logo*/
 String image_path = null;
@@ -243,3 +243,95 @@ public boolean verifyFields()
     }
 }
 
+/*Create a function to check if the entered username already exists in the database*/
+public boolean checkUsername(String username){
+
+    PreparedStatement st;
+    ResultSet rs;
+    boolean username_exist = false;
+
+    String query = "SELECT*FROM `users` WHERE `username`=?";
+
+    try {
+
+        st = Login_Form.getConnection().prepareStatement(query);
+        st.setString(1, username);
+        rs=st.executeQuery();
+        
+        if(re.next())
+        {
+            username_exist = true;
+            jOptionPane.showMessageDialog(null, "This Username is Already Taken, Choose Another One", "Username Failed", 2);
+        }
+    }
+    
+    catch(SQLException ex) {
+        Logger.getLogger(Register_Form.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    return username_exist;
+
+}
+
+/*button register*/
+private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
+        /*get data from fields*/
+        String fname = jTextField_Fullname.getText();
+        String username = jTextField_Username.getText();
+        String pass1 = String.valueOf(jPasswordField_1.getPassword());
+        String pass2 = String.valueOf(jPasswordField_2.getPassword());
+        String phone = jTextField_Phone.getText();
+        String gender = "Male";
+         
+        if(jRadioButton_Female.isSelected()){
+             gender = "Female";
+        }
+        
+        /*Check if the data are empty*/
+        if(verifyFields()) {
+        /*check if the username already exists*/
+            if(!checkUsername(username)) {
+                PreparedStatement ps;
+                ResultSet rs;
+                String registerUserQuery = "INSERT INTO `users`(`full_name`, `username`, `password`, `phone`, `gender`, `picture`) VALUES (?,?,?,?,?,?)";
+                 
+                try {
+                     
+                    ps = My_CNX.getConnection().prepareStatement(registerUserQuery);
+                    ps.setString(1, fname);
+                    ps.setString(2, username);
+                    ps.setString(3, pass1);
+                    ps.setString(4, phone);
+                    ps.setString(5, gender);
+                     
+                    try {
+                        /*save the image as blob in the database*/
+                        if(image_path != null){
+                         
+                            InputStream image = new FileInputStream(new File(image_path));
+                            ps.setBlob(6, image);}
+
+                        else{
+                            ps.setNull(6, java.sql.Types.NULL);
+                        }
+                         
+                        if(ps.executeUpdate() != 0){
+                            JOptionPane.showMessageDialog(null, "Your Account Has Been Created");
+                        }
+                        
+                        else{
+                            JOptionPane.showMessageDialog(null, "Error: Check Your Information");
+                        }
+                    }
+
+                    catch (FileNotFoundException ex) {
+                        Logger.getLogger(Register_Form.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                    catch (SQLException ex) {
+                        Logger.getLogger(Register_Form.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+            }
+        }
+}
+/*End of the Login form*/
