@@ -339,3 +339,15 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
 
 /*Beginning of the Sign In form*/
 public SignIn_Form() {
+    initComponents();
+    
+    /*Center the form positioning*/
+    this.setLocationRelativeTo(null);
+    
+    /*Create a yellow border for the jPanel_title*/
+    /*0 border in the top*/
+    Border jpanel_title_border = BorderFactory.createGlossBorder(0, 1, 1, 1, Color.yellow);
+    /*Set the border to the jPanel_title*/
+    jPanel_title.setBorder(jpanel_title_border);
+    
+    
