@@ -117,8 +117,85 @@ private void jLabel-closeMouseClicked(java.awt.eventMouseEvent evt) {
 
 }
 
-/**/
+/*jlabel close -> mouse enter event*/
+private void jLabel_closedMouseEntered(java.awt.event.MouseEvent evt) {
 
+    /*Change the jlabel border to white*/
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
+    jLabel_close.setBorder(label_border);
+    /*Set the jlabel foreground to white*/
+    jLabel_close.setForeground(Color.white);
+    
+}
+
+/*jlabel close -> mouse entered event*/
+private void jLabel_closedMouseEntered(java.awt.event.MouseEvent evt) {
+
+    Border label_border = BorderFactory.createMatteBorder(1,1,1,1 Color.white);
+    jLabel_close.setBorder(label_border);
+    /*Set the jlabel foreground to white*/
+    jLabel_close.setForeground(Color.white);
+
+}
+
+/*jlabel close -> mouse exited event*/
+private void jLabel_closeMouseExited(java.awt.event.MouseEvent evt) {
+    /*reset the jlabel border color to white*/
+    Border label_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black);
+    jLabel_close.setBorder(label_border);
+    /*reset the jlabel foreground to black*/
+    jLabel_close.setForeground(Color.black);
+
+}
+
+/*JTextField For the Phone Number -> KeyTyped Event*/
+private void jTextField_PhoneKeyTyped(java.awt.event.KeyEvent evt) {
+
+    /*Set field to only numbers*/
+    if(!Character.isDigit(evt.getKeyChar())) {
+        evt.consume
+    }
+}
+
+/*Button select image*/
+private void jButton_SelectImageActionPerformed(java.awt.event.ActionEvent evt) {
+
+    /*Select an image and set the image path into a jlabel*/
+    String path = null;
+
+    jFileChooser chooser = new jFileChooser();
+
+    chooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+
+    /*File extention*/
+    FileNameExtentionFilter extention = new
+    FileNameExtentionFilter("*.images", "jpg", "png", "jpeg");
+    chooser.addChoosableFileFilter(extention);
+
+    int filestate = chooser.showSaveDialog(null);
+
+    /*Check if user has selected an image*/
+    if(filestate == jFileChooser.APPROVE_OPTION) {
+
+    File selectedImage = chooser.getSelectedFile();
+    path = selectedImage.getAbsolutePath();
+    jLabel_imgpath.setText(path);
+
+    image_path = path;
+    }
+
+}
+
+/*A jlabel to open the login form on Mouse Clicked Event*/
+private void jLabel_loginMouseClicked(java.awt.event.MouseEvent evt) {
+
+    Login_Form lf = new Login_Form();
+    lf.setVisible(true);
+    lf.pack();
+    lf.setDefaultCloseOperation(jFrame.EXIT_ON_CLOSE);
+    this.dispose();
+
+}
 
 
 
