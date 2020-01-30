@@ -1,6 +1,7 @@
 /*The start of the class for our application */
 /*Here we initiate our Connection to MySQL for the Login_Form*/
-package com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+package login_ragister_design;
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -9,7 +10,7 @@ import java.util.logging.Logger;
 
 /*Created By Bxxdyz*/
 
-public class Login_Form {
+public class Login_Form_Connection {
     
     private static String servername = "localhost";
     private static String username = "root";
@@ -31,7 +32,7 @@ public class Login_Form {
         try{
             cnx = datasource.getConnection();
         }catch(SQLException ex){
-            Logger.getLogger("Get Connection ->" + Login_Form.class.getName()).log(Level.SEVERE,null, ex);
+            Logger.getLogger("Get Connection ->" + Login_Form_Connection.class.getName()).log(Level.SEVERE,null, ex);
     }
      
         return form;
@@ -254,7 +255,7 @@ public boolean checkUsername(String username){
 
     try {
 
-        st = Login_Form.getConnection().prepareStatement(query);
+        st = Login_Form_Connection.getConnection().prepareStatement(query);
         st.setString(1, username);
         rs=st.executeQuery();
         
@@ -297,7 +298,7 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
                  
                 try {
                      
-                    ps = My_CNX.getConnection().prepareStatement(registerUserQuery);
+                    ps = Login_Form_Connection.getConnection().prepareStatement(registerUserQuery);
                     ps.setString(1, fname);
                     ps.setString(2, username);
                     ps.setString(3, pass1);
@@ -335,3 +336,6 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
         }
 }
 /*End of the Login form*/
+
+/*Beginning of the Sign In form*/
+public SignIn_Form() {
