@@ -374,3 +374,17 @@ public SignIn_Form() {
     jPasswordField.setBorder(field_border);
         
 }
+
+/*jlabel minimize -> mouse entered*/
+private void jLabel_minimizeMouseEntered(java.awt.event.MouseEvent evt) {
+    Border label_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.white);
+    jLabel_minimize.setBorder(label_border);
+    jLabel_minimize.setForeground(Color.white);
+}
+
+/*jlabel minimize -> mouse exited*/
+private void jLabel_minimizeMouseExited(java.awt.event.MouseEvent evt) {
+    Border label_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black);
+    jLabel_minimize.setBorder(label_border);
+    jLabel_minimize.setForeground(Color.black);
+}
