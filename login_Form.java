@@ -501,3 +501,10 @@ private void jLabel_minimizeMouseClicked(java.awt.event.MouseEvent evt) {
     this.setState(jFrame.ICONIFIED);
 
 }
+
+/*jlabel close -> mouse clicked*/
+private void jLabel_closeMouseClicked(java.awt.event.MouseEvent evt) {
+
+System.exit(0);
+
+}
