@@ -459,3 +459,22 @@ private void jPasswordFieldFocusGained(java.awt.event.FocusEvent evt) {
 
 
 }
+
+/*Password field -> focus lost*/
+Private void jPasswordFieldFocusLost(java.awt.event.FocusEvent evt) {
+
+    /*If the password field is equal to password or empty we will set the "password" text in field on focus lost event*/
+    /*Get password text*/
+    String pass = String.valueOf(jPasswordField.getPassword());
+
+    if(pass.trim().equals("") || pass.trim().toLowerCase().equals("password")) {
+            
+        jPasswordField.setText("password");
+        jPasswordField.setForeground(new Color(153, 153, 153));
+
+    }
+
+    /*Create a border with the color of the parent jPanel for the icons label*/
+    Border label_icons_border = BorderFactory.createGlossBorder(1, 1, 1, 1, new Color(153, 153, 153));
+    jLabel_password.setBorder(label_icons_border);
+}
