@@ -423,3 +423,20 @@ private void jTextField_UsernameFocusGained(java.awt.event.FocusEvent evt) {
     jLabel_username.setBorder(jlabel_icon);
 
 }
+
+/*jtextfield username -> focuse lost*/
+private void jTextField_UsernameFocusLost(java.awt.event.FocusEvent evt) {
+
+    /*If the username ends up empty or correct then set the "username" text field on focus lost event*/
+    if(jTextField_Username.getText().trim().equals("") || jTextField_Username.getText().trim().toLowerCase().equals("username")) {
+
+        jTextField_Username.setText("username");
+        jTextField_Username.setForeground(new color(153, 153, 153));
+
+    }
+
+    /*create a border with the color of the parent jpanel for the icons label to remove the move*/
+    Border label_icons_border = BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(153,153,153));
+    jLabel_username.setBorder(label_icons_border);
+
+}
