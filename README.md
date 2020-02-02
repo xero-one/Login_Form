@@ -1,4 +1,4 @@
-<h1 class=centered>Login Form</h1>
+<h1 align="center">Login Form</h1>
 <br>
 <p>Welcome fellow viewers and coders! In this repository you will find a generic log-in/sign-up form (compnent) that are used in every day mobile applications. The objective of this small project is to learn how a java coded log-in/sign-up form works  front-end wise and back-end wise.</p>
 
