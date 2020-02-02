@@ -461,7 +461,7 @@ private void jPasswordFieldFocusGained(java.awt.event.FocusEvent evt) {
 }
 
 /*Password field -> focus lost*/
-Private void jPasswordFieldFocusLost(java.awt.event.FocusEvent evt) {
+private void jPasswordFieldFocusLost(java.awt.event.FocusEvent evt) {
 
     /*If the password field is equal to password or empty we will set the "password" text in field on focus lost event*/
     /*Get password text*/
@@ -478,3 +478,6 @@ Private void jPasswordFieldFocusLost(java.awt.event.FocusEvent evt) {
     Border label_icons_border = BorderFactory.createGlossBorder(1, 1, 1, 1, new Color(153, 153, 153));
     jLabel_password.setBorder(label_icons_border);
 }
+
+/*Login button -> mouse entered*/
+
