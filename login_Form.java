@@ -406,3 +406,20 @@ private void jLabel_closeMouseExited(java.awt.event.MouseEvent evt) {
     jLabel_close.setForeground(Color.black);
 
 }
+
+/*jtextfield username -> focus gained*/
+private void jTextField_UsernameFocusGained(java.awt.event.FocusEvent evt) {
+
+    /*clear the textfield on focus if the text is "username"*/
+    if(jTextField_Username.getText().trim().toLowerCase().equals("username")) {
+
+        jTextField_Username.setText("");
+        jTextField_Username.setForeground(Color.black);
+
+    }
+
+    /*Set yellow border to th jlabel icon*/
+    Border jlabel_icon = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.yellow);
+    jLabel_username.setBorder(jlabel_icon);
+
+}
