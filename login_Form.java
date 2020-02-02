@@ -397,3 +397,12 @@ private void jLabel_closeMouseEntered(java.awt.event.MouseEvent evt) {
     jLabel_close.setForeground(Color.black);
 
 }
+
+/*jlabel close -> mouse exited*/
+private void jLabel_closeMouseExited(java.awt.event.MouseEvent evt) {
+
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
+    jLabel_close.setBorder(label_border);
+    jLabel_close.setForeground(Color.black);
+
+}
