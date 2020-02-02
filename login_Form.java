@@ -486,3 +486,11 @@ private void jButton_LoginMouseEntered(java.awt.event.MouseEvent evt) {
     jButton_Login.setBackground(new Color(0, 101, 183));
 
 }
+
+/*Login button -> mouse exited*/
+private void jButton_LoginMouseExited(java.awt.event.MouseEvent evt) {
+
+    /*set jbutton background*/
+    jButton_Login.setBackground(new Color(0, 84, 104));
+
+}
