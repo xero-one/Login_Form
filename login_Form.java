@@ -388,3 +388,12 @@ private void jLabel_minimizeMouseExited(java.awt.event.MouseEvent evt) {
     jLabel_minimize.setBorder(label_border);
     jLabel_minimize.setForeground(Color.black);
 }
+
+/*jlabel close -> mouse exited*/
+private void jLabel_closeMouseEntered(java.awt.event.MouseEvent evt) {
+
+    Border label_border = NorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
+    jLabel_close.setBorder(label_border);
+    jLabel_close.setForeground(Color.black);
+
+}
