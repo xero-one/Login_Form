@@ -494,3 +494,10 @@ private void jButton_LoginMouseExited(java.awt.event.MouseEvent evt) {
     jButton_Login.setBackground(new Color(0, 84, 104));
 
 }
+
+/*jlabel minimize -> mouse clicked*/
+private void jLabel_minimizeMouseClicked(java.awt.event.MouseEvent evt) {
+
+    this.setState(jFrame.ICONIFIED);
+
+}
