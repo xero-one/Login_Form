@@ -480,4 +480,9 @@ private void jPasswordFieldFocusLost(java.awt.event.FocusEvent evt) {
 }
 
 /*Login button -> mouse entered*/
+private void jButton_LoginMouseEntered(java.awt.event.MouseEvent evt) {
 
+    /*Set jbutton background color*/
+    jButton_Login.setBackground(new Color(0, 101, 183));
+
+}
