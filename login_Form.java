@@ -440,3 +440,22 @@ private void jTextField_UsernameFocusLost(java.awt.event.FocusEvent evt) {
     jLabel_username.setBorder(label_icons_border);
 
 }
+
+/*Password field -> focus gained*/
+private void jPasswordFieldFocusGained(java.awt.event.FocusEvent evt) {
+    
+    /*Clear the password field on focus if the text is "password"*/
+    String pass = String.valueOf(jPasswordField.getPassword());
+    if(pass.trim().toLowerCase().equals("password")) {
+
+        jPasswordField.setText("");
+        jPasswordField.setForeground(Color.black);
+
+    }
+    
+    /*Set a yellow border to the jlabel icon*/
+    Border jlabel_icon = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.yellow);
+    jLabel_password.setBorder(jlabel_icon);
+
+
+}
