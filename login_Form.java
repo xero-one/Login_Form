@@ -1,4 +1,4 @@
-/*The start of the class for our application */
+/*BEGINNING OF THE CLASS FOR APPLICATION*/
 /*Here we initiate our Connection to MySQL for the Login_Form*/
 package login_ragister_design;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
@@ -40,9 +40,12 @@ public class Login_Form_Connection {
 
 }
 
-/*End the class for our application*/
+/*END THE CLASS FOR OUR APPLICATION*/
 
-/*Beginning of the Login form*/
+
+
+
+/*BEGINNING OF THE LOGIN FORM*/
 
 /*Create a variable to set the image path for the logo*/
 String image_path = null;
@@ -335,9 +338,13 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
             }
         }
 }
-/*End of the Login form*/
+/*END OF THE LOGIN FORM*/
 
-/*Beginning of the Sign In form*/
+
+
+
+
+/*BEGINNING OF THE SIGN IN FORM*/
 public SignIn_Form() {
     initComponents();
     
@@ -575,3 +582,16 @@ private void jLabel_Create_AccountMouseExited(java.awt.event.MuseEvent evt) {
     jLabel_Create_Account.setBorder(label_create_account_border);
 
 }
+
+/*open the register form when the user clicks on the jlabel with the mouse*/
+private void jLabel_Create_AccountMouseClicked(java.awt.event.MouseEvent evt) {
+
+    Register_Form rf = new Register_Form();
+    rf.setVisible(true);
+    rf.pack();
+    rf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    this.dispose();
+
+}
+
+/*END OF THE SIGN IN FORM*/
