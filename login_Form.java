@@ -519,4 +519,14 @@ private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {
     String username = jTextField_Username.getText();
     String password = String.valueOf(jPasswordField.getPassword());
 
+    /*Create a select query to check if the username and the password exists in the database*/
+    String query = "SELECT * FROM `users` WHERE `username` = ? AND `password` = ?";
+    
+    /*Show a message if the username of the password fields are empty*/
+    if(username.trim().equals("username")) {
+        
+        JOptionPane.showMessageDialog(null, "Enter Your Username", "Empty Username", 2);
+        
+    }
 }
+
