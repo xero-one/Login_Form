@@ -19,7 +19,7 @@ public class Login_Form_Connection {
     private static String Password = "Wolviver24";
     
     public static Connection getConnection() {
-        Connection form = null;
+        Connection Form_Connection = null;
         
         MysqlDataSource datasource = new MysqlDataSource();
         
@@ -30,12 +30,12 @@ public class Login_Form_Connection {
         datasource.setPortNumber(portnumber);
         
         try{
-            cnx = datasource.getConnection();
+            Form_Connection = datasource.getConnection();
         }catch(SQLException ex){
             Logger.getLogger("Get Connection ->" + Login_Form_Connection.class.getName()).log(Level.SEVERE,null, ex);
     }
      
-        return form;
+        return Form_Connection;
     }
 
 }
