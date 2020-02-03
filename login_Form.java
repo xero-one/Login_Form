@@ -541,8 +541,15 @@ private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {
             rs = st.executeQuery();
             
             if(rs.next()) {
-            
+                /*Show a new form*/
+                Menu_Form from = new Menu_Form();
+                form.setVisible(true);
+                form.pack();
+                form.setLocationRelativeTo(null);
+                /*Show current form (login form)*/
+                this.dispose();
             }
+            
         }
     }
 }
