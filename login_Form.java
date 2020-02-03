@@ -508,3 +508,15 @@ private void jLabel_closeMouseClicked(java.awt.event.MouseEvent evt) {
 System.exit(0);
 
 }
+
+/*Button login*/
+private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {
+
+    PreparedStatement st;
+    ResultSet rs;
+
+    /*get username & passwords*/
+    String username = jTextField_Username.getText();
+    String password = String.valueOf(jPasswordField.getPassword());
+
+}
