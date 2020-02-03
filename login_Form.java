@@ -532,6 +532,18 @@ private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {
     {
         JOptionPane.showMessageDialog(null, "Enter Your Password", "Empty Password", 2);
     }
-
+    else{
+        try{
+            st = Login_Form_Connection.getConnection().prepareStatement(query);
+            
+            st.setString(1, username);
+            st.setString(2, password);
+            rs = st.executeQuery();
+            
+            if(rs.next()) {
+            
+            }
+        }
+    }
 }
 
