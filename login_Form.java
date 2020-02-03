@@ -528,5 +528,10 @@ private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {
         JOptionPane.showMessageDialog(null, "Enter Your Username", "Empty Username", 2);
         
     }
+    else if(password.trim().equals("password"))
+    {
+        JOptionPane.showMessageDialog(null, "Enter Your Password", "Empty Password", 2);
+    }
+
 }
 
