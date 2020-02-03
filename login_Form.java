@@ -549,7 +549,13 @@ private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {
                 /*Show current form (login form)*/
                 this.dispose();
             }
-            
+            else{
+                /*Send error message*/
+                JOptionPane.showMessageDialog(null, "Invalid Username / Password", "Login Error", 2);
+            }
+        }
+        catch(SQLException ex) {
+            Logger.getLogger(Login_Form.class.getName()).log(Level.SEVERE,null, ex);
         }
     }
 }
