@@ -560,3 +560,10 @@ private void jButton_LoginActionPerformed(java.awt.event.ActionEvent evt) {
     }
 }
 
+/*jLabel create account -> mouse entered*/
+private void jLabel_Create_AccountMouseEntered(java.awt.event.MouseEvent evt) {
+
+    Border label_border = BorderFactory.createGlossBorder(0, 0, 1, 0, Color.red);
+    jLabel_Create_Account.setBorder(label_border);
+
+}
