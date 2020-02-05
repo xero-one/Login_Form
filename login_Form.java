@@ -95,7 +95,7 @@ public Register_Form() {
 /*jlabel minimized -> mouse click event*/
 private void jLabel_minimizeMouseClicked(java.awt.event.MouseEvent evt) {
 
-    this.setState(jFrame.ICONIFIED);
+    this.setState(JFrame.ICONIFIED);
 
 }
 
@@ -106,7 +106,7 @@ private void jLabel_minimizeMouseEntered(java.awt.event.MouseEvent evt) {
     Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
     jLabel_minimize.setBorder(label_border);
     /*Set the jlabel foreground to white*/
-    jLabel_minimizeForeground(Color.white);
+jLabel_minimize.setForeground(Color.white);
 
 }
 
@@ -122,9 +122,9 @@ private void jLabel_minimizeMouseExited(java.awt.event.MouseEvent evt) {
 }
 
 /*jLabel close -> mouse click event*/
-private void jLabel-closeMouseClicked(java.awt.eventMouseEvent evt) {
+private void jLabel-closeMouseClicked(java.awt.event.MouseEvent evt) {
 
-    system.exit(0);
+    System.exit(0);
 
 }
 
