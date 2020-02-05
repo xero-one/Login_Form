@@ -131,7 +131,7 @@ private void jLabel-closeMouseClicked(java.awt.event.MouseEvent evt) {
 /*jlabel close -> mouse entered event*/
 private void jLabel_closedMouseEntered(java.awt.event.MouseEvent evt) {
 
-    Border label_border = BorderFactory.createMatteBorder(1,1,1,1 Color.white);
+    Border label_border = BorderFactory.createGlossBorder(1,1,1,1 Color.white);
     jLabel_close.setBorder(label_border);
     /*Set the jlabel foreground to white*/
     jLabel_close.setForeground(Color.white);
@@ -141,7 +141,7 @@ private void jLabel_closedMouseEntered(java.awt.event.MouseEvent evt) {
 /*jlabel close -> mouse exited event*/
 private void jLabel_closeMouseExited(java.awt.event.MouseEvent evt) {
     /*reset the jlabel border color to white*/
-    Border label_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black);
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
     jLabel_close.setBorder(label_border);
     /*reset the jlabel foreground to black*/
     jLabel_close.setForeground(Color.black);
@@ -153,7 +153,7 @@ private void jTextField_PhoneKeyTyped(java.awt.event.KeyEvent evt) {
 
     /*Set field to only numbers*/
     if(!Character.isDigit(evt.getKeyChar())) {
-        evt.consume
+        evt.consume();
     }
 }
 
