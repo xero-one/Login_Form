@@ -66,7 +66,7 @@ public Register_Form() {
     /*Boarder settings for the Jpanel*/
     Border jpanel_title_border = BorderFactory.createGlossBorder(0, 1, 1, 1, Color.yellow);
 
-    jpanel_title.setBorder(jpanel_title_border);
+    jPanel_title.setBorder(jpanel_title_border);
 
     /*Secondary border for minimizing and closing jlabels*/
     Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
@@ -86,7 +86,7 @@ public Register_Form() {
     jPasswordField_2.setBorder(field_border);
 
     /*Create a button for interactivity*/
-    ButtonGroup bg = new Buttongroup();
+    ButtonGroup bg = new ButtonGroup();
     bg.add(jRadioButton_Male);
     bg.add(jRadioButton_Female);
 
