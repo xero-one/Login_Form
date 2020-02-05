@@ -7,4 +7,5 @@
   <li>Java</li>
   <li>MySQL</li>
   <li>PhpMyAdmin</li>
+  <li>JavaConnector</li>
 </ul>
