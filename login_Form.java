@@ -192,7 +192,7 @@ private void jLabel_loginMouseClicked(java.awt.event.MouseEvent evt) {
     Login_Form lf = new Login_Form();
     lf.setVisible(true);
     lf.pack();
-    lf.setDefaultCloseOperation(jFrame.EXIT_ON_CLOSE);
+    lf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.dispose();
 
 }
