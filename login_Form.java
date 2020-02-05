@@ -256,12 +256,12 @@ public boolean checkUsername(String username){
 
         st = Login_Form_Connection.getConnection().prepareStatement(query);
         st.setString(1, username);
-        rs=st.executeQuery();
+        rs = st.executeQuery();
         
-        if(re.next())
+        if(rs.next())
         {
             username_exist = true;
-            jOptionPane.showMessageDialog(null, "This Username is Already Taken, Choose Another One", "Username Failed", 2);
+            JOptionPane.showMessageDialog(null, "This Username is Already Taken, Choose Another One", "Username Failed", 2);
         }
     }
     
