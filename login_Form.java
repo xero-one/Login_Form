@@ -128,17 +128,6 @@ private void jLabel-closeMouseClicked(java.awt.event.MouseEvent evt) {
 
 }
 
-/*jlabel close -> mouse enter event*/
-private void jLabel_closedMouseEntered(java.awt.event.MouseEvent evt) {
-
-    /*Change the jlabel border to white*/
-    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
-    jLabel_close.setBorder(label_border);
-    /*Set the jlabel foreground to white*/
-    jLabel_close.setForeground(Color.white);
-    
-}
-
 /*jlabel close -> mouse entered event*/
 private void jLabel_closedMouseEntered(java.awt.event.MouseEvent evt) {
 
