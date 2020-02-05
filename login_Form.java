@@ -200,7 +200,7 @@ private void jLabel_loginMouseClicked(java.awt.event.MouseEvent evt) {
 /*Reset the jlabel border color on mouse entered*/
 private void jLabel_loginMouseEntered(java.awt.event.MouseEvent evt) {
 
-    Border label_border = BorderFactory.createMatteBorder(0, 0, 1, 0, new Color(0, 240, 0));
+    Border label_border = BorderFactory.createGlossBorder(0, 0, 1, 0, new Color(0, 204, 0));
     jLabel_login.setBorder(label_border);
 
 }
@@ -208,7 +208,7 @@ private void jLabel_loginMouseEntered(java.awt.event.MouseEvent evt) {
 /*Reset the jlabel border color on mouse exited*/
 private void jLabel_loginMouseExited(java.awt.event.MouseEvent evt) {
 
-    Border label_create_account_border = borderFactory.createGlossBorder(0, 0, 1, 0, Color.lightGray);
+    Border label_create_account_border = BorderFactory.createGlossBorder(0, 0, 1, 0, Color.lightGray);
     jLabel_login.setBorder(label_create_account_border);
 
 }
