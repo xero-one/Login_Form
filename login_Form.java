@@ -163,19 +163,19 @@ private void jButton_SelectImageActionPerformed(java.awt.event.ActionEvent evt) 
     /*Select an image and set the image path into a jlabel*/
     String path = null;
 
-    jFileChooser chooser = new jFileChooser();
+    JFileChooser chooser = new JFileChooser();
 
     chooser.setCurrentDirectory(new File(System.getProperty("user.home")));
 
     /*File extention*/
     FileNameExtentionFilter extention = new
     FileNameExtentionFilter("*.images", "jpg", "png", "jpeg");
-    chooser.addChoosableFileFilter(extention);
+    chooser.addChoosableFileFilter(extension);
 
     int filestate = chooser.showSaveDialog(null);
 
     /*Check if user has selected an image*/
-    if(filestate == jFileChooser.APPROVE_OPTION) {
+    if(filestate == JFileChooser.APPROVE_OPTION) {
 
     File selectedImage = chooser.getSelectedFile();
     path = selectedImage.getAbsolutePath();
