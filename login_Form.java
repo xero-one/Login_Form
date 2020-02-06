@@ -572,7 +572,7 @@ private void jLabel_Create_AccountMouseEntered(java.awt.event.MouseEvent evt) {
 }
 
 /*jlabel create account -> mouse exited*/
-private void jLabel_Create_AccountMouseExited(java.awt.event.MuseEvent evt) {
+private void jLabel_Create_AccountMouseExited(java.awt.event.MouseEvent evt) {
 
     Border label_create_account_border = BorderFactory.createGlossBorder(0, 0, 1, 0, Color.lightGray);
     jLabel_Create_Account.setBorder(label_create_account_border);
