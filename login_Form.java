@@ -439,7 +439,7 @@ private void jTextField_UsernameFocusLost(java.awt.event.FocusEvent evt) {
     }
 
     /*create a border with the color of the parent jpanel for the icons label to remove the move*/
-    Border label_icons_border = BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(153,153,153));
+    Border label_icons_border = BorderFactory.createGlossBorder(1, 1, 1, 1, new Color(153,153,153));
     jLabel_username.setBorder(label_icons_border);
 
 }
@@ -501,7 +501,7 @@ private void jButton_LoginMouseExited(java.awt.event.MouseEvent evt) {
 /*jlabel minimize -> mouse clicked*/
 private void jLabel_minimizeMouseClicked(java.awt.event.MouseEvent evt) {
 
-    this.setState(jFrame.ICONIFIED);
+    this.setState(JFrame.ICONIFIED);
 
 }
 
