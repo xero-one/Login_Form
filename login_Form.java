@@ -306,7 +306,7 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
                      
                     try {
                         /*save the image as blob in the database*/
-                        if(image_path != null){
+                        if(image_path ! = null){
                          
                             InputStream image = new FileInputStream(new File(image_path));
                             ps.setBlob(6, image);}
@@ -315,7 +315,7 @@ private void jButton_RegisterActionPerformed(java.awt.event.ActionEvent evt) {
                             ps.setNull(6, java.sql.Types.NULL);
                         }
                          
-                        if(ps.executeUpdate() != 0){
+                        if(ps.executeUpdate() ! = 0){
                             JOptionPane.showMessageDialog(null, "Your Account Has Been Created");
                         }
                         
