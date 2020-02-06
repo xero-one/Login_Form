@@ -380,14 +380,14 @@ public SignIn_Form() {
 
 /*jlabel minimize -> mouse entered*/
 private void jLabel_minimizeMouseEntered(java.awt.event.MouseEvent evt) {
-    Border label_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.white);
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
     jLabel_minimize.setBorder(label_border);
     jLabel_minimize.setForeground(Color.white);
 }
 
 /*jlabel minimize -> mouse exited*/
 private void jLabel_minimizeMouseExited(java.awt.event.MouseEvent evt) {
-    Border label_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black);
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
     jLabel_minimize.setBorder(label_border);
     jLabel_minimize.setForeground(Color.black);
 }
@@ -395,7 +395,7 @@ private void jLabel_minimizeMouseExited(java.awt.event.MouseEvent evt) {
 /*jlabel close -> mouse exited*/
 private void jLabel_closeMouseEntered(java.awt.event.MouseEvent evt) {
 
-    Border label_border = NorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
     jLabel_close.setBorder(label_border);
     jLabel_close.setForeground(Color.black);
 
