@@ -392,12 +392,12 @@ private void jLabel_minimizeMouseExited(java.awt.event.MouseEvent evt) {
     jLabel_minimize.setForeground(Color.black);
 }
 
-/*jlabel close -> mouse exited*/
+/*jlabel close -> mouse entered*/
 private void jLabel_closeMouseEntered(java.awt.event.MouseEvent evt) {
 
-    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.black);
+    Border label_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.white);
     jLabel_close.setBorder(label_border);
-    jLabel_close.setForeground(Color.black);
+    jLabel_close.setForeground(Color.white);
 
 }
 
@@ -422,7 +422,7 @@ private void jTextField_UsernameFocusGained(java.awt.event.FocusEvent evt) {
     }
 
     /*Set yellow border to th jlabel icon*/
-    Border jlabel_icon = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.yellow);
+    Border jlabel_icon = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.yellow);
     jLabel_username.setBorder(jlabel_icon);
 
 }
