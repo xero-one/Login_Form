@@ -354,25 +354,25 @@ public SignIn_Form() {
     jPanel_title.setBorder(jpanel_title_border);
     
     /*Create an orange border for the global panel*/
-    Border glob_panel_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.orange);
+    Border glob_panel_border = BorderFactory.createGlossBorder(1, 1, 1, 1, Color.orange);
     jPanel1.setBorder(glob_panel_border);
         
     /*Create a black border for the close & minimize jlables*/
-    Border label_border = BorderFactory.createMatteBorder(1, 1, 1, 1, Color.black);
+    Border label_border = BorderFactory.createGlosseBorder(1, 1, 1, 1, Color.black);
     jLabel_minimize.setBorder(label_border);
     jLabel_close.setBorder(label_border);
         
     /*Create a border for the create acconut jlabel*/
-    Border label_create_accont_border = BorderFactory.createMatteBorder(0, 0, 1, 0, Color.lightGray);
-    jLabel_Create_Account.setBorder(label_create_accont_border);
+    Border label_create_account_border = BorderFactory.createGlossBorder(0, 0, 1, 0, Color.lightGray);
+    jLabel_Create_Account.setBorder(label_create_account_border);
         
     /*Create a border with the color of the parent jpanel for the icons label to remove the move*/
-    Border label_icons_border = BorderFactory.createMatteBorder(1, 1, 1, 1, new Color(153,153,153));
+    Border label_icons_border = BorderFactory.createGlossBorder(1, 1, 1, 1, new Color(153,153,153));
     jLabel_username.setBorder(label_icons_border);
     jLabel_password.setBorder(label_icons_border);
         
     /*create border for the username and password field*/
-    Border field_border = BorderFactory.createMatteBorder(1, 5, 1, 1, Color.white);
+    Border field_border = BorderFactory.createGlossBorder(1, 5, 1, 1, Color.white);
     jTextField_Username.setBorder(field_border);
     jPasswordField.setBorder(field_border);
         
