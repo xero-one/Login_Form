@@ -1,5 +1,3 @@
-DROP {DATABASE | SCHEMA} [ IF EXISTS] Login_Form_Connection;
-
 CREATE DATABASE Login_Form_Connection;
 USE Login_Form_Connection;
 
