@@ -4,5 +4,5 @@ USE Login_Form_Connection;
 CREATE Table User_Credentials (
 id INTEGER(11) AUTO_INCREMENT NOT NULL,
 username VARCHAR(100) NOT NULL,
-pass VARCHAR(100) NOT NULL
+pass VARCHAR(40) NOT NULL
 );
